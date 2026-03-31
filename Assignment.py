@@ -14,6 +14,7 @@
 # IMPORTS
 # =========================
 
+from app import GROQ_API_KEY
 import gradio as gr
 from PIL import Image
 
@@ -313,8 +314,8 @@ with gr.Blocks(theme=theme) as demo:
         inputs=[question_input, text_input, image_input],
         outputs=[output, feedback, extracted]
     )
-
-demo.launch()
+port = int(os.environ.get("PORT", 7860))
+demo.launch(server_name="0.0.0.0", server_port=port)
 
 
 # In[ ]:
