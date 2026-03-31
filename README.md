@@ -22,3 +22,4 @@ An AI-powered academic answer evaluation system that analyzes student responses 
   * Concept Understanding
   * Precision / Recall / F1
 * 🎯 Final weighted score calculation
+ Running on public URL: https://ffb159ce8a8f624148.gradio.live
