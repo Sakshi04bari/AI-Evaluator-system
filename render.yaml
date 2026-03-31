@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: neurograde-ai
+    name: ai-evaluator
     env: python
     buildCommand: |
+      apt-get update
+      apt-get install -y tesseract-ocr
       pip install -r requirements.txt
-      apt-get update && apt-get install -y tesseract-ocr
     startCommand: python Assignment.py
